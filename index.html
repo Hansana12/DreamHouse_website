@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream House</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+        /* Common Styles */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --font1 : 'Roboto', sans-serif;
+            --font2 : 'Oswald', sans-serif;
+        }
+        .wrapper {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        body {
+            background: #dddbd9;
+        }
+        #logo {
+            width: 280px;
+        }
+
+        h1 {
+            font-family: var(--font2);
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-family: var(--font1);
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-family: var(--font2);
+            font-size: 33px;
+            letter-spacing: 1px;
+            padding: 20px 0;
+            color: #222;
+        }
+
+
+        /* Header */
+
+        #header1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #mainmenu > a {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            color: #222;
+            text-transform: uppercase;
+            padding: 10px;
+        }
+
+        #mainmenu > span {
+            padding: 0 10px;
+            font-family: var(--font1);
+
+        }
+
+        #mainmenu > a:hover , .active {
+            border-bottom: 3px solid orange;
+        }
+
+        #menuicon {
+            margin-top: -10px;
+        }
+
+        /* main section */
+        #mainsection {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #mainleft {
+            width: 52%;
+        }
+
+        #mainright {
+            background-color: white;
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #welcome {
+            padding: 60px;
+        }
+
+        #imgset1 {
+            display: flex;
+        }
+
+        /* Cards ( Day 2 of design )*/
+        #cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+
+        .card {
+            background: white;
+            padding:30px 20px 20px;
+            width: 27%;
+            text-align: center;
+        }
+
+        .card > p {
+            color: grey;
+            font-style: italic;
+        }
+
+        .card > h2 {
+            text-transform: uppercase;
+        }
+
+        /* <!-- 4 Cards --> */
+
+        #fourcards {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        #fourcards > div {
+            width: 50%;
+            height: 280px;
+            padding: 50px 20px;
+            box-sizing: border-box;
+        }
+
+        #image1 {
+            background-image: url("images/chair-with-pillow.webp");
+            width: 50%;
+            height: 250px;
+            background-repeat: no-repeat;
+            background-position-y: -75px;
+            background-size: cover;
+        }
+
+        #image2 {
+            background-image: url("images/room.webp");
+            background-repeat: no-repeat;
+            width: 50%;
+            height: 250px;
+            background-size: cover;
+        }
+
+        #ideas {
+            background: white;
+        }
+
+        #plans {
+            background: #332e29;
+        }
+
+        #plans > p, #plans > h2 {
+            color: white;
+        }
+
+        /* New Ideas */
+        #newideas {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #para1 {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+
+        /* Interior Design Ideas */
+        #interior {
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        #container {
+            display: flex;
+        }
+
+        .whitebg {
+            background: white;
+            padding: 30px 20px;
+        }
+        .smallcards {
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        #containerright {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+        }
+        #containerleft {
+            width: 50%;
+            background:  url("images/traditional-house.webp") no-repeat;
+            background-size: cover;
+        }
+
+        /* Home & Apartment */
+        #apartment {
+            background-color: white;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        #para2 {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+
+        #imgset2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        /* Awesome Interiors */
+        #awesome {
+            background: #ccc0b0;
+            padding: 40px 0 ;
+        }
+
+        #container2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #container2 > div {
+            background: white;
+            padding: 30px;
+            width: 550px;
+            box-sizing: border-box;
+        }
+
+        .numbers {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        .title {
+            font-size: 25px;
+            letter-spacing: 0;
+        }
+
+        /* Contacts */
+
+        #contact {
+            padding: 40px 0;
+            background: #332e29;
+        }
+
+        #contactform {
+            width: 550px;
+            padding: 70px 30px 30px;
+            border: 2px solid #666;
+            box-sizing: border-box;
+        }
+
+        #contactform > h1,
+        #contactform > p {
+            color: white;    
+        } 
+
+        #contactform > span {
+            color: #53cbaa;
+            font-family: var(--font1);
+        }
+
+        .formitem {
+            border: 2px solid #666;
+            padding: 15px;
+            background: transparent;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 20px 0;
+            font-family: var(--font1);
+            color: white;
+            font-size: 16px;
+        }
+
+        #contactform > button {
+            padding: 15px 40px;
+            border: 2px solid #666;
+            text-transform: uppercase;
+            background: transparent;
+            font-family: var(--font1);
+            color: white;
+            font-size: 18px;
+        }
+
+        #container3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #map {
+            width: 550px;
+            height: auto;
+            border: none;
+            background: #424242;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #332e29;
+        }
+
+        #footermenu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footerlinks {
+            font-family: var(--font1);
+            color: white;
+            list-style: none; 
+        }
+
+        .link {
+            color: #ccc;
+        }
+
+        .footerlinks > li {
+                padding: 10px 0;
+        }
+
+        .footerheading {
+            font-family: var(--font1);
+            color: #ccc;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 20px;
+        }
+        #copyright {
+            background: #333;
+            color: #ccc;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+        #para3 {
+            text-align: center;
+            color: #ccc;
+        }
+
+        @media screen and (max-width: 1240px)  {
+            .wrapper {
+                width: 96%;
+                padding-left: 2%;
+                padding-right: 2%;
+            }
+        
+            #imgset1 > img{
+            width: 33.3%;
+        }
+            /* 4 Cards  */
+
+            #fourcards > div {
+                height: auto;
+            }    
+
+            #image1 {
+                background-position-y:0;
+            }
+
+            /* New Ideas */
+
+            #para1 {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            /* Home and Apartment */
+
+            #imgset2 > img {
+                width: 48%;
+            }
+
+            #para2 {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            /* Awsome Interiors */
+
+            #container > div {
+                width: 48%;
+            }
+
+            /* Contact */
+
+            #contactform, #map {
+                width: 48%;
+            }
+        }
+
+        /* Header */
+
+        @media screen and (max-width: 1080px) {
+            #welcome > h1 {
+                font-size: 35px;
+            }
+
+            h1 {
+                font-size: 45px;
+            }
+
+            #imgset1 > img {
+                width: 100px;
+                margin: 10px;
+            }
+
+            #imgset1 {
+                justify-content: center;
+            }
+
+            #mainright {
+                display: block;
+            }
+
+            #welcome {
+                padding: 30px 20px 20px 30px;
+            }
+
+            /* interior design   ideas */
+
+            #whitebg {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 850px)  {
+            #mainsection {
+                flex-direction: column;
+            }
+
+            #mainleft, #mainright {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 780px)  {
+            #mainmenu {
+                display: none;
+            }
+        }
+
+        /* 3 Cards */
+
+        @media screen and (max-width: 780px)  {
+            #mainmenu {
+                display: none;
+            }
+
+            #cards {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+                box-sizing: border-box;
+                margin: 10px 0;
+            }
+        }
+
+        /* Four cards */
+
+        @media screen and (max-width: 650px)  {
+            #fourcards {
+                flex-direction: column;
+            }
+
+            #fourcards > div {
+                width: 100%;
+            }
+
+            #image1 > #image2 {
+                height: 250px !important;
+            }
+
+            #image1 {
+                background-position-y: center;
+            }
+
+        /* interior design ideas */
+
+            #container {
+                flex-direction: column;
+            }
+
+            #container > div {
+                width: 100%;
+            }
+
+            #containerleft {
+                height: 250px;
+            }
+
+        /* Contact */
+
+            #container3 {
+                flex-direction: column;
+            }
+
+            #contactform, #map {
+                width: 100%;
+            }
+
+            #map {
+                height: 250px;
+                margin-top: 20px;
+            }
+        }
+
+        /* Awsome interiors */
+
+        @media screen and (max-width: 550px)  {
+            #container2 {
+                flex-direction: column;
+            }
+
+            #container2 > div {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+        /* Footer */
+
+            #footermenu {
+                flex-direction: column;
+            }
+
+            .footerheading {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .footerlinks {
+                text-align: center;
+            }
+        }
+
+        /* Header */
+
+        @media screen and (max-width: 400px)  {
+            #logo {
+                width: 240px;
+            }
+
+            #imgset1 > img {
+                width: 25%;
+            }
+        }
+
+        @media screen and (max-width: 320px)  {
+            .wrapper {
+                width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="wrapper" id="header1">
+        <img src="images/dreamhouse-logo.svg" alt="logo" id="logo">
+
+        <nav id="mainmenu">
+            <a href="#" class="active"><img src="images/home-icon.svg" alt="Home"></a><span>|</span>
+            <a href="#">Designs</a><span>|</span>
+            <a href="#">About Us</a><span>|</span>
+            <a href="#" id="contactus">Contact Us</a>
+        </nav>
+        <img src="images/menu.svg" alt="Menu" id="menuicon">
+    </header>
+    <section class="wrapper" id="mainsection">
+        <img src="images/living-room.webp" alt="Living Room" id="mainleft">
+        <div id="mainright">
+            <div id="welcome">
+                <h1>Thai Style Home Wabi Sabi</h1>
+                <p>Our passion for innovative home design, coupled with a commitment to personalized service, 
+                    sets us apart. With a keen eye for detail and a focus on client satisfaction,
+                     our experienced team of designers and architects is dedicated to bringing your vision to life.
+                      Explore our portfolio to witness the magic of our previous projects, each a testament to our creativity and craftsmanship.
+                       Whether you're envisioning a modern oasis, a cozy traditional haven, or a functional space that reflects your unique style,
+                         
+                     </p>
+                   <p>we are here to turn your dreams into reality.</p>
+                   <p>  Let's embark on a journey of design excellence together – welcome home.</p>
+            </div>
+            <figure id="imgset1">
+                <img src="images/pillows.webp" alt="pillows">
+                <img src="images/sea.webp" alt="sea">
+                <img src="images/chair.webp" alt="chair">
+               </figure>
+        </div>
+    </section>
+    <!-- Cards -->
+    <section class="wrapper" id="cards">
+        <div class="card">
+            <img src="images/rocket.svg" alt="rocket">
+            <h2>Projects</h2>
+            <p>Introducing our latest project, a seamless blend of elegance and functionality.we've meticulously crafted a space that harmonizes with your lifestyle and aesthetic preferences.</p>
+        </div>
+        <div class="card">
+            <img src="images/medal.svg" alt="medal">
+            <h2>Awards</h2>
+            <p> Take a glimpse into our project gallery and witness the transformation of spaces, where innovation meets sophistication.</p>
+        </div>
+        <div class="card">
+            <img src="images/network.svg" alt="network">
+            <h2>Team</h2>
+            <p>Explore the artistry behind each project and envision the possibilities for your own space. Welcome to a world where design meets distinction..</p>
+        </div>
+    </section>
+    <!-- four cards -->
+    <section class="wrapper" id="fourcards">
+        <div id="image1"></div>
+        <div id="ideas">
+            <h2>Design Ideas</h2>
+            <p>Dive into a treasure trove of creativity, where every idea is a potential masterpiece for your home. our design ideas cater to diverse tastes and preferences!</p>
+        </div>
+        <div id="plans">
+            <h2>House Plans</h2>
+            <p>Discover a world of design possibilities with our curated collection of ideas that inspire and elevate your living spaces. From contemporary chic to timeless classics,.</p>
+            
+        </div>
+        <div id="image2"></div>
+    </section>
+    <!-- New Ideas -->
+    <section id="newideas">
+        <div class="wrapper">
+            <h1 class="center">New Ideas To Life</h1>
+            <p class="center" id="para1">Stay ahead of the curve and infuse your space with the excitement of the contemporary. Explore our latest design concepts and reimagine your home in ways you never thought possible. Welcome to a world where creativity knows no bounds.</p>
+
+        </div>
+    </section>
+    <!-- Interior Design Ideas -->
+    <section class="wrapper" id="interior">
+        <h1 class="center">
+            50+ Interior Design Ideas
+        </h1>
+        <div id="container">
+            <div id="containerleft"></div>
+            <div id="containerright">
+                <div class="whitebg smallcards">
+                    <p>Our team of creative minds constantly explores fresh concepts, blending trends with timeless aesthetics to bring you cutting-edge ideas that resonate with your unique style. .</p>
+                </div>
+                <img src="images/statues.webp" alt="statues" class="smallcards">
+                <img src="images/wood-bed.webp" alt="wood bed" class="smallcards"> 
+                <div class="whitebg smallcards">
+                    <p>Whether it's a bold color palette, ingenious space-saving solutions, or innovative furniture arrangements, our new ideas are crafted to inspire and elevate your home.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Home Apartment -->
+    <section id="apartment">
+        <div class="wrapper">
+            <h1 class="center">Home & Apartment</h1>
+            <p class="center" id="para2">From compact urban dwellings to expansive suburban retreats, we specialize in transforming spaces into havens that reflect your personality and preferences. .</p>
+               <figure id="imgset2">
+                <img src="images/living-area.webp" alt="living area">
+                <img src="images/angle-chair.webp" alt="Angle Chair">
+               </figure> 
+        </div>
+        </div>
+    </section>
+    <!-- /* Awesome Interiors */ -->
+    <section id="awesome">
+        <div class="wrapper" id="container2">
+            <div>
+                <h2 class="title">
+                    <span 
+                        class="numbers">01
+                    </span>
+                    Awsome Interiors
+                </h2>
+                <p>Transforming Spaces, Crafting Memories – Where Awesome Interiors Come to Life! Let the journey to your dream space begin with our innovative and captivating design </p>
+            </div>
+            <div>
+                <h2 class="title">
+                    <span 
+                        class="numbers">02
+                    </span>
+                    Fresh & Creative
+                </h2>
+                <p>Fresh & Creative: Breathing Life into Spaces with Innovative Design Solutions. Let the journey to your dream space begin with our innovative and captivating design </p>
+            </div>
+        </div>
+    </section>
+    <!-- Contacts -->
+    <section id="contact">
+        <div class="wrapper" id="container3">
+            <form action="" id="contactform">
+                <h1>Contact Us</h1>
+                <p>We are here to answer your questions. If you have any questions please leave us a message. We will contact with you as soon as possible.!</p>
+                <span>contacts@abc.com</span>
+                <input class="formitem" type="text" placeholder="Name">
+                <input class="formitem" type="email" placeholder="Email">
+                <textarea class="formitem" placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.360929243871!2d80.03251347591606!3d7.084090216393243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fb6a031eb25f%3A0x5d31d65e1bffe988!2sRevoise!5e0!3m2!1sen!2slk!4v1696585944295!5m2!1sen!2slk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper" id="footermenu">
+            <nav>
+                <span class="footerheading">Main Menu</span>
+                <ul class="footerlinks">
+                        <li><a class="link" href="#">Home</a></li>
+                        <li><a class="link" href="#">About Us</a></li>
+                        <li><a class="link" href="#">Contact Us</a></li>
+                        <li><a class="link"href="#">Our Designs</a></li>
+                </ul>        
+            </nav>
+            <nav>
+                <span class="footerheading">Main Menu</span>
+                <ul class="footerlinks">
+                        <li><a class="link" href="#">Home</a></li>
+                        <li><a class="link" href="#">About Us</a></li>
+                        <li><a class="link" href="#">Contact Us</a></li>
+                        <li><a class="link" href="#">Our Designs</a></li>
+                </ul>        
+            </nav>
+            <nav>
+                <span class="footerheading">Main Menu</span>
+                    <ul class="footerlinks">
+                        <li><a class="link" href="#">Home</a></li>
+                        <li><a class="link" href="#">About Us</a></li>
+                        <li><a class="link" href="#">Contact Us</a></li>
+                        <li><a class="link" href="#">Our Designs</a></li>
+                    </ul>
+            </nav>
+        </div>    
+        <div id="copyright">
+            <div class="wrapper">
+                <p id="para3">All Right Reserved &copy; Webclass 2023</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
